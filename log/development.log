@@ -1,0 +1,2690 @@
+Started GET "/" for 127.0.0.1 at 2018-07-10 18:16:54 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by BienvenidoController#index as HTML
+  Rendering bienvenido/index.html.erb within layouts/application
+  Rendered bienvenido/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 1066ms (Views: 1018.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articulos/new" for 127.0.0.1 at 2018-07-10 18:17:05 -0500
+Processing by ArticulosController#new as HTML
+Filter chain halted as #<Proc:0x000000000ab0c610@C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articulos/new" for 127.0.0.1 at 2018-07-10 18:17:10 -0500
+Processing by ArticulosController#new as HTML
+Filter chain halted as #<Proc:0x000000000ab0c610@C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/articulos/new" for 127.0.0.1 at 2018-07-10 18:17:22 -0500
+Processing by ArticulosController#new as HTML
+  Rendering articulos/new.html.erb within layouts/application
+  Rendered articulos/new.html.erb within layouts/application (67.2ms)
+Completed 200 OK in 318ms (Views: 275.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-07-10 18:17:28 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/devise-4.4.3/app/views/devise/sessions/new.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 509ms (Views: 413.8ms | ActiveRecord: 68.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-07-10 18:17:40 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9ZbQI9nM/E20mE9HpFs5KnW05qNlriwko9F9bjU+ntzfDDbJ1lEUBgce8kcnYEBrLHJP+HxeN5qSfn9bhmulaQ==", "user"=>{"email"=>"mguerra@virtual.com.co", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mguerra@virtual.com.co"], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (30.0ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-07-10 23:17:41.105777"], ["last_sign_in_at", "2018-07-04 02:10:17.399582"], ["sign_in_count", 4], ["updated_at", "2018-07-10 23:17:41.107761"], ["id", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 470ms (ActiveRecord: 46.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-07-10 18:17:41 -0500
+Processing by BienvenidoController#index as HTML
+  Rendering bienvenido/index.html.erb within layouts/application
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/bienvenido/index.html.erb:5
+  Rendered bienvenido/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 294ms (Views: 256.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articulos" for 127.0.0.1 at 2018-07-10 18:17:47 -0500
+Processing by ArticulosController#index as HTML
+  Rendering articulos/index.html.erb within layouts/application
+  [1m[36mArticulo Load (49.2ms)[0m  [1m[34mSELECT "articulos".* FROM "articulos"[0m
+  ↳ app/views/articulos/index.html.erb:10
+  Rendered articulos/index.html.erb within layouts/application (59.2ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 341ms (Views: 209.8ms | ActiveRecord: 53.2ms)
+
+
+Started GET "/articulos/new" for 127.0.0.1 at 2018-07-10 18:17:52 -0500
+Processing by ArticulosController#new as HTML
+  Rendering articulos/new.html.erb within layouts/application
+  Rendered articulos/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 268ms (Views: 218.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articulos" for 127.0.0.1 at 2018-07-10 18:18:10 -0500
+Processing by ArticulosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4YfQfv+BNVfARk4zp7XyWu3mUGIvoF2OPpZU5KyVlFhZGqaMRKfHoVHlCtwU9b4gGz6MgU+jIMLUQgCZG66wsw==", "articulo"=>{"title"=>"titulo 2", "text"=>"texto 2"}, "commit"=>"Guardar"}
+Filter chain halted as #<Proc:0x000000000ab0c610@C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/action_controller/metal/http_authentication.rb:72> rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/articulos" for 127.0.0.1 at 2018-07-10 18:18:10 -0500
+Processing by ArticulosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4YfQfv+BNVfARk4zp7XyWu3mUGIvoF2OPpZU5KyVlFhZGqaMRKfHoVHlCtwU9b4gGz6MgU+jIMLUQgCZG66wsw==", "articulo"=>{"title"=>"titulo 2", "text"=>"texto 2"}, "commit"=>"Guardar"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/articulos_controller.rb:15
+  [1m[36mArticulo Create (30.1ms)[0m  [1m[32mINSERT INTO "articulos" ("title", "text", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "titulo 2"], ["text", "texto 2"], ["created_at", "2018-07-10 23:18:10.750740"], ["updated_at", "2018-07-10 23:18:10.750740"]]
+  ↳ app/controllers/articulos_controller.rb:15
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/articulos_controller.rb:15
+Redirected to http://localhost:3000/articulos/2
+Completed 302 Found in 39ms (ActiveRecord: 32.1ms)
+
+
+Started GET "/articulos/2" for 127.0.0.1 at 2018-07-10 18:18:10 -0500
+Processing by ArticulosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticulo Load (1.0ms)[0m  [1m[34mSELECT  "articulos".* FROM "articulos" WHERE "articulos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articulos_controller.rb:25
+  Rendering articulos/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."articulo_id" = $1[0m  [["articulo_id", 2]]
+  ↳ app/views/articulos/show.html.erb:21
+  Rendered articulos/show.html.erb within layouts/application (460.4ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 728ms (Views: 678.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/articulos/2" for 127.0.0.1 at 2018-07-10 18:18:22 -0500
+Processing by ArticulosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticulo Load (1.0ms)[0m  [1m[34mSELECT  "articulos".* FROM "articulos" WHERE "articulos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articulos_controller.rb:25
+  Rendering articulos/show.html.erb within layouts/application
+  [1m[36mComentario Load (1.0ms)[0m  [1m[34mSELECT "comentarios".* FROM "comentarios" WHERE "comentarios"."articulo_id" = $1[0m  [["articulo_id", 2]]
+  ↳ app/views/articulos/show.html.erb:21
+  Rendered articulos/show.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 257ms (Views: 209.1ms | ActiveRecord: 3.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6617535630868360695)[0m
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsuarios (20180710234127)
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (249.0ms)[0m  [1m[35mCREATE TABLE "usuarios" ("id" bigserial primary key, "nombre" character varying, "email" character varying, "login" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20180710234127_create_usuarios.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180710234127"]]
+  ↳ bin/rails:4
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (3.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(6617535630868360695)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 18:54:44 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (34.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (72.1ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 1013ms (Views: 937.9ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 18:55:13 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"exThsoQY0aixP/9Rvo3qLpvVpvXGu0Tuf3giRMRBdtLDiZdAPz4jXiCcu74NzaZUbQ16Fqa4OaKVrHY5c3pSOQ==", "usuario"=>{"nombre"=>"Mauro", "email"=>"mguerra@virtual.com", "login"=>"mguerra"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (2.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Mauro"], ["email", "mguerra@virtual.com"], ["login", "mguerra"], ["created_at", "2018-07-10 23:55:13.797834"], ["updated_at", "2018-07-10 23:55:13.797834"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 330b30ea-e811-4a39-ac94-39b3aba744c5) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c5d5190 @uri=#<URI::GID gid://mguerra-blog/Usuario/1>>}
+Redirected to http://localhost:3000/usuarios/1
+Completed 302 Found in 773ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/usuarios/1" for 127.0.0.1 at 2018-07-10 18:55:14 -0500
+  [1m[36mUsuario Load (54.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#show as HTML
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [330b30ea-e811-4a39-ac94-39b3aba744c5] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 330b30ea-e811-4a39-ac94-39b3aba744c5) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c6cb5b8 @uri=#<URI::GID gid://mguerra-blog/Usuario/1>>}
+  Parameters: {"id"=>"1"}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [330b30ea-e811-4a39-ac94-39b3aba744c5] UsuarioMailer#bienvenidos_email: processed outbound mail in 3.0ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [330b30ea-e811-4a39-ac94-39b3aba744c5] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 330b30ea-e811-4a39-ac94-39b3aba744c5) from Async(mailers) in 5.0ms: Errno::ENOENT (No such file or directory @ rb_sysopen - assets/images/taza.jpg):
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `read'
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `bienvenidos_email'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:194:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:98:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:134:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:25:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:24:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:32:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:607:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:606:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:134:in `block in processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `tap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:150:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 308ms (Views: 255.7ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:12:10 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (17.9ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 660ms (Views: 596.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:12:15 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (31.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (68.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 365ms (Views: 324.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:13:00 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38c38UHiFnnwmCvKcGaVfhGuGCQT/EEVrEV1Wt3/ZxyPYjXIJVPjbZ5xEAUeRITd8OfWCL9zhOWuc2A7ayriAQ==", "usuario"=>{"nombre"=>"Usuario1", "email"=>"maoguerra007@gmail.com", "login"=>"usuario1"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Usuario1"], ["email", "maoguerra007@gmail.com"], ["login", "usuario1"], ["created_at", "2018-07-11 00:13:00.572041"], ["updated_at", "2018-07-11 00:13:00.572041"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: cb0f77fb-f580-4050-9f06-70df9ab4721c) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000cc53c10 @uri=#<URI::GID gid://mguerra-blog/Usuario/2>>}
+Redirected to http://localhost:3000/usuarios/2
+Completed 302 Found in 353ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/2" for 127.0.0.1 at 2018-07-10 19:13:00 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUsuario Load (6.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [cb0f77fb-f580-4050-9f06-70df9ab4721c] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: cb0f77fb-f580-4050-9f06-70df9ab4721c) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000aabc458 @uri=#<URI::GID gid://mguerra-blog/Usuario/2>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [cb0f77fb-f580-4050-9f06-70df9ab4721c] UsuarioMailer#bienvenidos_email: processed outbound mail in 1.0ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [cb0f77fb-f580-4050-9f06-70df9ab4721c] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: cb0f77fb-f580-4050-9f06-70df9ab4721c) from Async(mailers) in 2.0ms: Errno::ENOENT (No such file or directory @ rb_sysopen - assets/images/taza.jpg):
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `read'
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `bienvenidos_email'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:194:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:98:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:134:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:25:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:24:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:32:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:607:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:606:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:134:in `block in processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `tap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:150:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 289ms (Views: 247.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/2/edit" for 127.0.0.1 at 2018-07-10 19:14:40 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/edit.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (30.0ms)
+  Rendered usuarios/edit.html.erb within layouts/application (86.1ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 702ms (Views: 591.6ms | ActiveRecord: 22.6ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:14:50 -0500
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 264ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:14:52 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (6.1ms)
+  Rendered usuarios/new.html.erb within layouts/application (53.8ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 303ms (Views: 257.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:15:05 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pCnOmUSvJc+ft9o8aknUuuHlIpF0Kw+UODhy3Vll/xL0jMygIB7Q2/Fe4fMEa8UZAKzsvdikymQ6Dme877B6Dw==", "usuario"=>{"nombre"=>"usuario2", "email"=>"maoguerra007@gmail.com", "login"=>"usuario2"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "usuario2"], ["email", "maoguerra007@gmail.com"], ["login", "usuario2"], ["created_at", "2018-07-11 00:15:05.415328"], ["updated_at", "2018-07-11 00:15:05.415328"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 67d49938-e3a2-4cd2-bc68-a9dc95c3f186) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000bee5420 @uri=#<URI::GID gid://mguerra-blog/Usuario/3>>}
+Redirected to http://localhost:3000/usuarios/3
+Completed 302 Found in 293ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios/3" for 127.0.0.1 at 2018-07-10 19:15:05 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (15.6ms)
+  [1m[36mUsuario Load (6.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [67d49938-e3a2-4cd2-bc68-a9dc95c3f186] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 67d49938-e3a2-4cd2-bc68-a9dc95c3f186) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000bcafa98 @uri=#<URI::GID gid://mguerra-blog/Usuario/3>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [67d49938-e3a2-4cd2-bc68-a9dc95c3f186] UsuarioMailer#bienvenidos_email: processed outbound mail in 3.0ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [67d49938-e3a2-4cd2-bc68-a9dc95c3f186] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: 67d49938-e3a2-4cd2-bc68-a9dc95c3f186) from Async(mailers) in 5.0ms: Errno::ENOENT (No such file or directory @ rb_sysopen - assets/images/taza.jpg):
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `read'
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:6:in `bienvenidos_email'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:194:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:98:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:134:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:25:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:24:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:32:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:607:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:606:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:134:in `block in processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `tap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:150:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 287ms (Views: 252.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:20:14 -0500
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (33.7ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 606ms (Views: 551.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:20:17 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (23.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (68.7ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 321ms (Views: 299.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:20:36 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AOIMKVeW3N11qrBL02XXI0fVsqZ2vLS6sMfxNfPaRmEpooJwe+uZxs/kQ5Bb4b/bFaY5jVVNyLo9QqlYRrsBA==", "usuario"=>{"nombre"=>"Usuario 3", "email"=>"maoguerra007@gmail.com", "login"=>"usuario3"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (0.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Usuario 3"], ["email", "maoguerra007@gmail.com"], ["login", "usuario3"], ["created_at", "2018-07-11 00:20:36.945364"], ["updated_at", "2018-07-11 00:20:36.945364"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: af968f73-43fb-4a57-b2d6-52a86f79970c) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x0000000005f151f8 @uri=#<URI::GID gid://mguerra-blog/Usuario/4>>}
+Redirected to http://localhost:3000/usuarios/4
+Completed 302 Found in 342ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/4" for 127.0.0.1 at 2018-07-10 19:20:37 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [af968f73-43fb-4a57-b2d6-52a86f79970c] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: af968f73-43fb-4a57-b2d6-52a86f79970c) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c68c430 @uri=#<URI::GID gid://mguerra-blog/Usuario/4>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [af968f73-43fb-4a57-b2d6-52a86f79970c]   Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [af968f73-43fb-4a57-b2d6-52a86f79970c]   Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (44.3ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [af968f73-43fb-4a57-b2d6-52a86f79970c] UsuarioMailer#bienvenidos_email: processed outbound mail in 613.8ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [af968f73-43fb-4a57-b2d6-52a86f79970c] Error performing ActionMailer::Parameterized::DeliveryJob (Job ID: af968f73-43fb-4a57-b2d6-52a86f79970c) from Async(mailers) in 616.85ms: ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/views/usuario_mailer/bienvenidos_email.html.erb:7:in `_app_views_usuario_mailer_bienvenidos_email_html_erb__524908873_103513020'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/template.rb:159:in `block in render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:170:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/template.rb:354:in `instrument_render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/template.rb:157:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/template_renderer.rb:54:in `block (2 levels) in render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/abstract_renderer.rb:44:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/abstract_renderer.rb:43:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/template_renderer.rb:53:in `block in render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/template_renderer.rb:52:in `render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/template_renderer.rb:16:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/renderer.rb:44:in `render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/renderer/renderer.rb:25:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:103:in `_render_template'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:84:in `render_to_body'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/rendering.rb:25:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:943:in `block in collect_responses_from_templates'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:940:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:940:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:940:in `map'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:940:in `collect_responses_from_templates'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:925:in `collect_responses'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:828:in `mail'
+C:/Users/TopGroup/Downloads/IniciandoConGit/Clase11/mguerra-blog/app/mailers/usuario_mailer.rb:7:in `bienvenidos_email'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:194:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:98:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/callbacks.rb:41:in `process_action'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionpack-5.2.0/lib/abstract_controller/base.rb:134:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:25:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/rescuable.rb:24:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionview-5.2.0/lib/action_view/rendering.rb:32:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:607:in `block in process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/base.rb:606:in `process'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:134:in `block in processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `tap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:132:in `processed_mailer'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/actionmailer-5.2.0/lib/action_mailer/parameterized.rb:150:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:39:in `block in perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/i18n-1.0.1/lib/i18n.rb:284:in `with_locale'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/translation.rb:9:in `block (2 levels) in <module:Translation>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:26:in `block (4 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `block in instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/notifications.rb:168:in `instrument'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:25:in `block (3 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `block in tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:28:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/tagged_logging.rb:71:in `tagged'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:46:in `tag_logger'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/logging.rb:22:in `block (2 levels) in <module:Logging>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:35:in `perform_now'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:24:in `block in execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:109:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:28:in `block (4 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:73:in `block in wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/execution_wrapper.rb:87:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/reloader.rb:72:in `wrap'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/railtie.rb:27:in `block (3 levels) in <class:Railtie>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `instance_exec'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.0/lib/active_support/callbacks.rb:136:in `run_callbacks'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/execution.rb:22:in `execute'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activejob-5.2.0/lib/active_job/queue_adapters/async_adapter.rb:70:in `perform'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:348:in `run_task'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:337:in `block (3 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:320:in `block (2 levels) in create_worker'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `catch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/concurrent-ruby-1.0.5/lib/concurrent/executor/ruby_thread_pool_executor.rb:319:in `block in create_worker'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 883ms (Views: 831.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/rails/mailers/usuario%20mailer/bienvenidos_email" for 127.0.0.1 at 2018-07-10 19:22:06 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"usuario mailer/bienvenidos_email"}
+Completed 404 Not Found in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+AbstractController::ActionNotFound (Mailer preview 'usuario mailer/bienvenidos_email' not found):
+  
+railties (5.2.0) lib/rails/mailers_controller.rb:60:in `find_preview'
+activesupport (5.2.0) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.0) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.0) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.0) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.0) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.0) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.0) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.0) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.0) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.0) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.0) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.0) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.0) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.0) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.0) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.0) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.0) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.5) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.5) lib/rack/etag.rb:25:in `call'
+rack (2.0.5) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.5) lib/rack/head.rb:12:in `call'
+actionpack (5.2.0) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.5) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.5) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.0) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/rails/mailers/usuario_mailer/bienvenidos_email" for 127.0.0.1 at 2018-07-10 19:22:25 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"usuario_mailer/bienvenidos_email"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/usuario_mailer_preview.rb:4
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (48.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 649.5ms
+Completed 500 Internal Server Error in 653ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    4:     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    5:   </head>
+    6:   <body>
+    7:     <h1>Bienvenido, <%= @usuario.nombre %></h1>
+    8:     <p>
+    9:     Has ingresado exitosamente,
+   10:       Usuario: <%= @usuario.login %>.<br>
+  
+app/views/usuario_mailer/bienvenidos_email.html.erb:7:in `_app_views_usuario_mailer_bienvenidos_email_html_erb__524908873_102084000'
+app/mailers/usuario_mailer.rb:7:in `bienvenidos_email'
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:25:57 -0500
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 286ms (Views: 240.3ms | ActiveRecord: 2.0ms)
+
+
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/rails/mailers/usuario_mailer/bienvenidos_email" for 127.0.0.1 at 2018-07-10 19:27:42 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"usuario_mailer/bienvenidos_email"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/usuario_mailer_preview.rb:4
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (36.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 618.4ms
+Completed 500 Internal Server Error in 1090ms (ActiveRecord: 9.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `nombre' for nil:NilClass):
+    4:     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    5:   </head>
+    6:   <body>
+    7:     <h1>Bienvenido, <%= @usuario.nombre %></h1>
+    8:     <p>
+    9:     Has ingresado exitosamente,
+   10:       Usuario: <%= @usuario.login %>.<br>
+  
+app/views/usuario_mailer/bienvenidos_email.html.erb:7:in `_app_views_usuario_mailer_bienvenidos_email_html_erb__859406995_64992400'
+app/mailers/usuario_mailer.rb:7:in `bienvenidos_email'
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:28:59 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (19.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (57.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 754ms (Views: 708.4ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/rails/mailers/usuario_mailer/bienvenidos_email" for 127.0.0.1 at 2018-07-10 19:29:52 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"usuario_mailer/bienvenidos_email"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/usuario_mailer_preview.rb:4
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (629.7ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 1309.2ms
+Completed 500 Internal Server Error in 1349ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `url' for #<#<Class:0x000000000cdc3e10>:0x0000000004439e38>
+Did you mean?  @url
+               URI):
+    6: tu usuario es <%= @usuario.login %>.
+    7: 
+    8: Para iniciar sesión en el sitio, simplemente siga este enlace:
+    9: <%= url %>
+  
+app/views/usuario_mailer/bienvenidos_email.text.erb:9:in `_app_views_usuario_mailer_bienvenidos_email_text_erb__86165483_107856700'
+app/mailers/usuario_mailer.rb:7:in `bienvenidos_email'
+Started GET "/rails/mailers/usuario_mailer/bienvenidos_email" for 127.0.0.1 at 2018-07-10 19:30:41 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"usuario_mailer/bienvenidos_email"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/usuario_mailer_preview.rb:4
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (2.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 1471.7ms
+  Rendering C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/railties-5.2.0/lib/rails/templates/rails/mailers/email.html.erb (24.0ms)
+Completed 200 OK in 3043ms (Views: 1296.8ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/rails/mailers/usuario_mailer/bienvenidos_email?part=text%2Fhtml" for 127.0.0.1 at 2018-07-10 19:30:46 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"usuario_mailer/bienvenidos_email"}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" ORDER BY "usuarios"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/usuario_mailer_preview.rb:4
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 804.2ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 813ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:31:52 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o2LdUPyFMUPLbM/ETOH5CF4njUWLxQpCkIDKphYxlMTzx99pmDTEV6WF9Asiw+irv25DaSdKz7KStt/HoOQR2Q==", "usuario"=>{"nombre"=>"usuario 4", "email"=>"maoguerra007@gmail.com", "login"=>"usuario4"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "usuario 4"], ["email", "maoguerra007@gmail.com"], ["login", "usuario4"], ["created_at", "2018-07-11 00:31:52.274792"], ["updated_at", "2018-07-11 00:31:52.274792"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (222.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 6c0d4312-1717-435b-a324-a678d2fd6bad) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c354ce0 @uri=#<URI::GID gid://mguerra-blog/Usuario/5>>}
+Redirected to http://localhost:3000/usuarios/5
+Completed 302 Found in 299ms (ActiveRecord: 224.5ms)
+
+
+Started GET "/usuarios/5" for 127.0.0.1 at 2018-07-10 19:31:52 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 6c0d4312-1717-435b-a324-a678d2fd6bad) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000b9edf08 @uri=#<URI::GID gid://mguerra-blog/Usuario/5>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad]   Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad]   Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad]   Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad]   Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad] UsuarioMailer#bienvenidos_email: processed outbound mail in 681.5ms
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 1304ms (Views: 1251.7ms | ActiveRecord: 8.0ms)
+
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad] Sent mail to maoguerra007@gmail.com (1810.7ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad] Date: Tue, 10 Jul 2018 19:31:53 -0500
+From: from@example.com
+To: maoguerra007@gmail.com
+Message-ID: <5b454ff99ac40_2e3861aa4f4398a@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b454ff99275b_2e3861aa4f438d4";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b454ff99275b_2e3861aa4f438d4
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgdXN1YXJpbyA0Cgo9PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRv
+IGNvcnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgdXN1YXJpbzQuCgpQYXJh
+IGluaWNpYXIgc2VzacOzbiBlbiBlbCBzaXRpbywgc2ltcGxlbWVudGUgc2ln
+YSBlc3RlIGVubGFjZToKaHR0cDovL2V4YW1wbGUuY29tL2xvZ2luCg==
+
+----==_mimepart_5b454ff99275b_2e3861aa4f438d4
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, usuario 4</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: usuario4.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b454ff99275b_2e3861aa4f438d4--
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [6c0d4312-1717-435b-a324-a678d2fd6bad] Performed ActionMailer::Parameterized::DeliveryJob (Job ID: 6c0d4312-1717-435b-a324-a678d2fd6bad) from Async(mailers) in 2497.03ms
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:33:50 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (20.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 551ms (Views: 498.8ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:33:57 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (20.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (62.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 385ms (Views: 330.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:34:03 -0500
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 264ms (Views: 232.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:34:07 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (2.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (38.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 355ms (Views: 301.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:34:25 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YlT9xDFL+UNKfxl4qAoSRJPkxmsLcDuyw3kQXVObkyky8f/9VfoMVySWIrfGKAPncq0IR6f//kLBTwU85U4WNA==", "usuario"=>{"nombre"=>"Usuario 5", "email"=>"maoguerra007@gmail.com", "login"=>"usuario5"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (0.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Usuario 5"], ["email", "maoguerra007@gmail.com"], ["login", "usuario5"], ["created_at", "2018-07-11 00:34:25.978110"], ["updated_at", "2018-07-11 00:34:25.978110"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+[ActiveJob] Enqueued ActionMailer::Parameterized::DeliveryJob (Job ID: 7aedbec3-5d36-4416-8312-c1402e3370be) to Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c2dbf98 @uri=#<URI::GID gid://mguerra-blog/Usuario/6>>}
+Redirected to http://localhost:3000/usuarios/6
+Completed 302 Found in 365ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/6" for 127.0.0.1 at 2018-07-10 19:34:26 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUsuario Load (3.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be] Performing ActionMailer::Parameterized::DeliveryJob (Job ID: 7aedbec3-5d36-4416-8312-c1402e3370be) from Async(mailers) with arguments: "UsuarioMailer", "bienvenidos_email", "deliver_now", {:usuario=>#<GlobalID:0x000000000c1dc9f8 @uri=#<URI::GID gid://mguerra-blog/Usuario/6>>}
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be]   Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be]   Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be]   Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be]   Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 998ms (Views: 954.5ms | ActiveRecord: 3.0ms)
+
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be] UsuarioMailer#bienvenidos_email: processed outbound mail in 1100.8ms
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be] Sent mail to maoguerra007@gmail.com (865.3ms)
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be] Date: Tue, 10 Jul 2018 19:34:27 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b455093b9404_2678616de5081482@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455093b5962_2678616de5081353";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455093b5962_2678616de5081353
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgVXN1YXJpbyA1Cgo9PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRv
+IGNvcnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgdXN1YXJpbzUuCgpQYXJh
+IGluaWNpYXIgc2VzacOzbiBlbiBlbCBzaXRpbywgc2ltcGxlbWVudGUgc2ln
+YSBlc3RlIGVubGFjZToKaHR0cDovL2V4YW1wbGUuY29tL2xvZ2luCg==
+
+----==_mimepart_5b455093b5962_2678616de5081353
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, Usuario 5</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: usuario5.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455093b5962_2678616de5081353--
+
+[ActiveJob] [ActionMailer::Parameterized::DeliveryJob] [7aedbec3-5d36-4416-8312-c1402e3370be] Performed ActionMailer::Parameterized::DeliveryJob (Job ID: 7aedbec3-5d36-4416-8312-c1402e3370be) from Async(mailers) in 1969.09ms
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:43:55 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (41.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 706ms (Views: 643.9ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:43:59 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (21.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 341ms (Views: 297.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:44:14 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sh1NxTpbHRFaHoHnkFpI4qkWKSGSGaQT+R4bgs1Ol9TiuE/8XuroBTT3uij+eFlBSF/nDT6WYeP7KA7je5sSyQ==", "usuario"=>{"nombre"=>"Usuario 6", "email"=>"winmonitoreo@gmail.com", "login"=>"usuario6"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Usuario 6"], ["email", "winmonitoreo@gmail.com"], ["login", "usuario6"], ["created_at", "2018-07-11 00:44:14.568631"], ["updated_at", "2018-07-11 00:44:14.568631"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 877.6ms
+Sent mail to winmonitoreo@gmail.com (1476.4ms)
+Date: Tue, 10 Jul 2018 19:44:15 -0500
+From: winmonitoreo@gmail.com
+To: winmonitoreo@gmail.com
+Message-ID: <5b4552dfb5c16_24ac313cc0412069@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b4552dfb3ccd_24ac313cc0411927";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b4552dfb3ccd_24ac313cc0411927
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgVXN1YXJpbyA2Cgo9PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRv
+IGNvcnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgdXN1YXJpbzYuCgpQYXJh
+IGluaWNpYXIgc2VzacOzbiBlbiBlbCBzaXRpbywgc2ltcGxlbWVudGUgc2ln
+YSBlc3RlIGVubGFjZToKaHR0cDovL2V4YW1wbGUuY29tL2xvZ2luCg==
+
+----==_mimepart_5b4552dfb3ccd_24ac313cc0411927
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, Usuario 6</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: usuario6.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b4552dfb3ccd_24ac313cc0411927--
+
+Redirected to http://localhost:3000/usuarios/7
+Completed 302 Found in 2652ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/7" for 127.0.0.1 at 2018-07-10 19:44:17 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 273ms (Views: 235.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:54:55 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (32.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 601ms (Views: 536.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:54:59 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (19.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (55.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 309ms (Views: 274.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:55:24 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sZ3OkJDoPH+wBEQWGJWzSWX49ja4581xU3glzXEpTRnhOMyp9FnJa97tf9l2t6LqhLE4GhRoCIFRTjCsx/zIBA==", "usuario"=>{"nombre"=>"usuario 7", "email"=>"maoguerra007@gmail.com", "login"=>"usuario7"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "usuario 7"], ["email", "maoguerra007@gmail.com"], ["login", "usuario7"], ["created_at", "2018-07-11 00:55:24.822434"], ["updated_at", "2018-07-11 00:55:24.822434"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 909.6ms
+Sent mail to maoguerra007@gmail.com (769.6ms)
+Date: Tue, 10 Jul 2018 19:55:26 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b45557ef6d0_29942fe3934139a2@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b45557ed789_29942fe39341384c";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b45557ed789_29942fe39341384c
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgdXN1YXJpbyA3Cgo9PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRv
+IGNvcnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgdXN1YXJpbzcuCgpQYXJh
+IGluaWNpYXIgc2VzacOzbiBlbiBlbCBzaXRpbywgc2ltcGxlbWVudGUgc2ln
+YSBlc3RlIGVubGFjZToKaHR0cDovL2V4YW1wbGUuY29tL2xvZ2luCg==
+
+----==_mimepart_5b45557ed789_29942fe39341384c
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, usuario 7</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: usuario7.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b45557ed789_29942fe39341384c--
+
+Redirected to http://localhost:3000/usuarios/8
+Completed 302 Found in 2010ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios/8" for 127.0.0.1 at 2018-07-10 19:55:26 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 254ms (Views: 218.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 19:58:34 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 695ms (Views: 632.4ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 19:58:43 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (38.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (69.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 329ms (Views: 294.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 19:58:56 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kKJnrjWVMZQfG9+mPYq3J2gwoU8jAPhXvv2wfa+FX87AB2WXUSTEgHHy5GlTqKaEiXlvY4+PPae8y6UcGVDa0w==", "usuario"=>{"nombre"=>"win", "email"=>"winmonitoreo@gmail.com", "login"=>"win"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "win"], ["email", "winmonitoreo@gmail.com"], ["login", "win"], ["created_at", "2018-07-11 00:58:56.359191"], ["updated_at", "2018-07-11 00:58:56.359191"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 782.0ms
+Sent mail to winmonitoreo@gmail.com (1004.4ms)
+Date: Tue, 10 Jul 2018 19:58:57 -0500
+From: winmonitoreo@gmail.com
+To: winmonitoreo@gmail.com
+Message-ID: <5b45565189152_232424a8fb01469e@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b45565187606_232424a8fb0145a1";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b45565187606_232424a8fb0145a1
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgd2luCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgd2luLgoKUGFyYSBpbmljaWFyIHNl
+c2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0ZSBlbmxh
+Y2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b45565187606_232424a8fb0145a1
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, win</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: win.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b45565187606_232424a8fb0145a1--
+
+Redirected to http://localhost:3000/usuarios/9
+Completed 302 Found in 2208ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/9" for 127.0.0.1 at 2018-07-10 19:58:58 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 343ms (Views: 287.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:02:13 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (29.2ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 653ms (Views: 589.0ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:02:20 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (20.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (53.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 317ms (Views: 282.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:02:29 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EyGKoht72u8D4+z5UvCPtU+7nueJKuw3DrZzcreHsopDhIibf8ov+20K1zY80p4WrvJQyyWlKccMgGYTAVI3lw==", "usuario"=>{"nombre"=>"mao", "email"=>"maoguerra007@gmail.com", "login"=>"mao2"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "mao"], ["email", "maoguerra007@gmail.com"], ["login", "mao2"], ["created_at", "2018-07-11 01:02:29.925019"], ["updated_at", "2018-07-11 01:02:29.925019"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 942.7ms
+Sent mail to maoguerra007@gmail.com (895.1ms)
+Date: Tue, 10 Jul 2018 20:02:31 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b4557272760c_226c2fee1a46263b@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455727256b5_226c2fee1a4625bf";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455727256b5_226c2fee1a4625bf
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgbWFvCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgbWFvMi4KClBhcmEgaW5pY2lhciBz
+ZXNpw7NuIGVuIGVsIHNpdGlvLCBzaW1wbGVtZW50ZSBzaWdhIGVzdGUgZW5s
+YWNlOgpodHRwOi8vZXhhbXBsZS5jb20vbG9naW4K
+
+----==_mimepart_5b455727256b5_226c2fee1a4625bf
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, mao</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: mao2.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455727256b5_226c2fee1a4625bf--
+
+Redirected to http://localhost:3000/usuarios/10
+Completed 302 Found in 2138ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/usuarios/10" for 127.0.0.1 at 2018-07-10 20:02:32 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 262ms (Views: 225.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:05:51 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (35.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 683ms (Views: 616.8ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:06:05 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (24.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (58.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 324ms (Views: 279.9ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:06:13 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hly+EFP4ufjOoA4Sm+EyZWe8E7hzf5j5URyA7Xc2cQ3W+bwpN0lM7KBJNd31wyPGhvXdlN/wXQlTKpWMweP0EA==", "usuario"=>{"nombre"=>"mao", "email"=>"maoguerra007@gmail.com", "login"=>"mao"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "mao"], ["email", "maoguerra007@gmail.com"], ["login", "mao"], ["created_at", "2018-07-11 01:06:13.384523"], ["updated_at", "2018-07-11 01:06:13.384523"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 904.6ms
+Sent mail to maoguerra007@gmail.com (739.8ms)
+Date: Tue, 10 Jul 2018 20:06:14 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b4558069e94a_210c3a26d8888484@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b4558069c9f1_210c3a26d8888368";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b4558069c9f1_210c3a26d8888368
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgbWFvCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgbWFvLgoKUGFyYSBpbmljaWFyIHNl
+c2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0ZSBlbmxh
+Y2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b4558069c9f1_210c3a26d8888368
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, mao</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: mao.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b4558069c9f1_210c3a26d8888368--
+
+Redirected to http://localhost:3000/usuarios/11
+Completed 302 Found in 2005ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios/11" for 127.0.0.1 at 2018-07-10 20:06:15 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 259ms (Views: 216.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:07:13 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (30.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 634ms (Views: 575.8ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:07:16 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (27.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (58.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 386ms (Views: 324.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:07:27 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8yml/9aJWBnXaA/R4PtgFXzymoxarhy8OqyxcOGUPb+jjKfGsjitDbmBNB6O2XG2nbtUoPYh2Uw4mqQRV0G4og==", "usuario"=>{"nombre"=>"uno", "email"=>"maoguerra007@gmail.com", "login"=>"uno"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "uno"], ["email", "maoguerra007@gmail.com"], ["login", "uno"], ["created_at", "2018-07-11 01:07:27.333655"], ["updated_at", "2018-07-11 01:07:27.333655"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 868.6ms
+Sent mail to maoguerra007@gmail.com (752.4ms)
+Date: Tue, 10 Jul 2018 20:07:28 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b45585079eba_2fdc31638b8191df@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b45585077b8d_2fdc31638b81908f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b45585077b8d_2fdc31638b81908f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgdW5vCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgdW5vLgoKUGFyYSBpbmljaWFyIHNl
+c2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0ZSBlbmxh
+Y2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b45585077b8d_2fdc31638b81908f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, uno</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: uno.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b45585077b8d_2fdc31638b81908f--
+
+Redirected to http://localhost:3000/usuarios/12
+Completed 302 Found in 1922ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios/12" for 127.0.0.1 at 2018-07-10 20:07:29 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 313ms (Views: 266.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:09:39 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (38.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 692ms (Views: 631.7ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:09:42 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (24.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (58.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 318ms (Views: 279.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:10:42 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z1pV0vefkYMHwwUI8IS7RdY4l5ARsiZUi1y/GFqUzIQ3/1frky5kl2kqPseepqrmN3FZvL0946SJaqp57EFJmQ==", "usuario"=>{"nombre"=>"dos", "email"=>"maoguerra007@gmail.com", "login"=>"dos"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (2.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "dos"], ["email", "maoguerra007@gmail.com"], ["login", "dos"], ["created_at", "2018-07-11 01:10:42.365744"], ["updated_at", "2018-07-11 01:10:42.365744"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (0.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 891.6ms
+Sent mail to maoguerra007@gmail.com (926.6ms)
+Date: Tue, 10 Jul 2018 20:10:43 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b4559139549d_2c0c31709a097073@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b4559139392c_2c0c31709a096984";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b4559139392c_2c0c31709a096984
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgZG9zCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgZG9zLgoKUGFyYSBpbmljaWFyIHNl
+c2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0ZSBlbmxh
+Y2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b4559139392c_2c0c31709a096984
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, dos</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: dos.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b4559139392c_2c0c31709a096984--
+
+Completed 500 Internal Server Error in 2177ms (ActiveRecord: 4.0ms)
+
+
+  
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at
+):
+  
+app/controllers/usuarios_controller.rb:32:in `block in create'
+app/controllers/usuarios_controller.rb:29:in `create'
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:12:26 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (23.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 639ms (Views: 577.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:12:31 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (49.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (115.1ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 428ms (Views: 393.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:13:17 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/5STzvTxOO23SqkvllNB9/IFOzKI4I9l7Kg/9VOWHzWvMZH3kEDN+dmjkuD4cVBUE0z1HiRvSpXuniqU5UOaKA==", "usuario"=>{"nombre"=>"tres", "email"=>"winmonitoreo@gmail.com", "login"=>"tres"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "tres"], ["email", "winmonitoreo@gmail.com"], ["login", "tres"], ["created_at", "2018-07-11 01:13:17.876923"], ["updated_at", "2018-07-11 01:13:17.876923"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 848.6ms
+Sent mail to winmonitoreo@gmail.com (773.9ms)
+Date: Tue, 10 Jul 2018 20:13:19 -0500
+From: winmonitoreo@gmail.com
+To: winmonitoreo@gmail.com
+Message-ID: <5b4559affce5_2b6c3aa0c3c4115@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b4559afdd9f_2b6c3aa0c3c41042";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b4559afdd9f_2b6c3aa0c3c41042
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgdHJlcwoKPT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PQoKSGFzIGluZ3Jlc2FkbyBjb3Jy
+ZWN0YW1lbnRlLgp0dSB1c3VhcmlvIGVzIHRyZXMuCgpQYXJhIGluaWNpYXIg
+c2VzacOzbiBlbiBlbCBzaXRpbywgc2ltcGxlbWVudGUgc2lnYSBlc3RlIGVu
+bGFjZToKaHR0cDovL2V4YW1wbGUuY29tL2xvZ2luCg==
+
+----==_mimepart_5b4559afdd9f_2b6c3aa0c3c41042
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, tres</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: tres.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b4559afdd9f_2b6c3aa0c3c41042--
+
+Completed 500 Internal Server Error in 1964ms (ActiveRecord: 9.0ms)
+
+
+  
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at
+):
+  
+app/controllers/usuarios_controller.rb:32:in `block in create'
+app/controllers/usuarios_controller.rb:29:in `create'
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:18:30 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 666ms (Views: 603.0ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:18:44 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (417.3ms)
+  Rendered usuarios/new.html.erb within layouts/application (452.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 741ms (Views: 702.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:18:53 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RSgdm3Q4vYsAuICjYP9vjVA+0Xd25BAKxB7/xQdBvCEVjR+iEIlIn25Ru2wO3X4usXcfW9pr1frGKOqksZQ5PA==", "usuario"=>{"nombre"=>"cuatro", "email"=>"winmonitoreo@gmail.com", "login"=>"cuatro"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (1.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "cuatro"], ["email", "winmonitoreo@gmail.com"], ["login", "cuatro"], ["created_at", "2018-07-11 01:18:53.371629"], ["updated_at", "2018-07-11 01:18:53.371629"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 946.7ms
+Sent mail to winmonitoreo@gmail.com (2412.2ms)
+Date: Tue, 10 Jul 2018 20:18:54 -0500
+From: winmonitoreo@gmail.com
+To: winmonitoreo@gmail.com
+Message-ID: <5b455afeacbae_22e43ac10a412969@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455afeaa497_22e43ac10a412863";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455afeaa497_22e43ac10a412863
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgY3VhdHJvCgo9PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNv
+cnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgY3VhdHJvLgoKUGFyYSBpbmlj
+aWFyIHNlc2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0
+ZSBlbmxhY2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b455afeaa497_22e43ac10a412863
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, cuatro</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: cuatro.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455afeaa497_22e43ac10a412863--
+
+Redirected to http://localhost:3000/usuarios/15
+Completed 302 Found in 3751ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/usuarios/15" for 127.0.0.1 at 2018-07-10 20:18:57 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 263ms (Views: 220.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:26:42 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (34.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 693ms (Views: 638.1ms | ActiveRecord: 16.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:26:47 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (21.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (54.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 406ms (Views: 341.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:27:12 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bSZwbcza5lgO7R8gYWnfQlny8H5J/APLgt4Qp7y5rks9g3JUqGsTTGAEJO8PS87huLs+UuVzxjuA6AXGCmwrVg==", "usuario"=>{"nombre"=>"Pepito Perez", "email"=>"maoguerra007@gmail.com", "login"=>"pepito"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (11.1ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "Pepito Perez"], ["email", "maoguerra007@gmail.com"], ["login", "pepito"], ["created_at", "2018-07-11 01:27:12.320048"], ["updated_at", "2018-07-11 01:27:12.320048"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 934.0ms
+Sent mail to maoguerra007@gmail.com (799.6ms)
+Date: Tue, 10 Jul 2018 20:27:13 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b455cf18ebb0_1ec4308b9f41671b@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455cf18cc6c_1ec4308b9f41663f";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455cf18cc6c_1ec4308b9f41663f
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgUGVwaXRvIFBlcmV6Cgo9PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVz
+YWRvIGNvcnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgcGVwaXRvLgoKUGFy
+YSBpbmljaWFyIHNlc2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNp
+Z2EgZXN0ZSBlbmxhY2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b455cf18cc6c_1ec4308b9f41663f
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, Pepito Perez</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: pepito.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455cf18cc6c_1ec4308b9f41663f--
+
+Completed 500 Internal Server Error in 2065ms (ActiveRecord: 12.1ms)
+
+
+  
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at
+):
+  
+app/controllers/usuarios_controller.rb:32:in `block in create'
+app/controllers/usuarios_controller.rb:29:in `create'
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:29:23 -0500
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (0.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 292ms (Views: 258.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:29:27 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (3.0ms)
+  Rendered usuarios/new.html.erb within layouts/application (43.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 371ms (Views: 332.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:29:41 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z4j6WlHJjtKYHJ/qjg01JdebALQ7Ks6fFRjGkEEtGyQ3LfhjNXh7xvb1pCXgLySGNtLOmJelC28XLtPx9/ieOQ==", "usuario"=>{"nombre"=>"fulano", "email"=>"winmonitoreo@gmail.com", "login"=>"fulano"}, "commit"=>"Create Usuario"}
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (76.4ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "fulano"], ["email", "winmonitoreo@gmail.com"], ["login", "fulano"], ["created_at", "2018-07-11 01:29:41.902484"], ["updated_at", "2018-07-11 01:29:41.902484"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (1.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 695.5ms
+Sent mail to winmonitoreo@gmail.com (712.4ms)
+Date: Tue, 10 Jul 2018 20:29:42 -0500
+From: winmonitoreo@gmail.com
+To: winmonitoreo@gmail.com
+Message-ID: <5b455d86a811c_1ec4308b9f41699c@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455d86a69aa_1ec4308b9f41683a";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455d86a69aa_1ec4308b9f41683a
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgZnVsYW5vCgo9PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNv
+cnJlY3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgZnVsYW5vLgoKUGFyYSBpbmlj
+aWFyIHNlc2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0
+ZSBlbmxhY2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b455d86a69aa_1ec4308b9f41683a
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, fulano</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: fulano.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455d86a69aa_1ec4308b9f41683a--
+
+Completed 500 Internal Server Error in 1502ms (ActiveRecord: 77.4ms)
+
+
+  
+Net::SMTPAuthenticationError (530-5.5.1 Authentication Required. Learn more at
+):
+  
+app/controllers/usuarios_controller.rb:32:in `block in create'
+app/controllers/usuarios_controller.rb:29:in `create'
+Started GET "/usuarios" for 127.0.0.1 at 2018-07-10 20:34:57 -0500
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by UsuariosController#index as HTML
+  Rendering usuarios/index.html.erb within layouts/application
+  [1m[36mUsuario Load (2.0ms)[0m  [1m[34mSELECT "usuarios".* FROM "usuarios"[0m
+  ↳ app/views/usuarios/index.html.erb:16
+  Rendered usuarios/index.html.erb within layouts/application (22.0ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 687ms (Views: 611.0ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/usuarios/new" for 127.0.0.1 at 2018-07-10 20:35:04 -0500
+Processing by UsuariosController#new as HTML
+  Rendering usuarios/new.html.erb within layouts/application
+  Rendered usuarios/_form.html.erb (441.3ms)
+  Rendered usuarios/new.html.erb within layouts/application (472.3ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 742ms (Views: 710.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2018-07-10 20:35:29 -0500
+Processing by UsuariosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p7g5ztUSgIJTYAbWQsJjtIXf4L3cS12m+3Mt0J00dLP3HTv3saN1lj2JPRks4HIXZJYukXDEmFb5RTixK+Hxrg==", "usuario"=>{"nombre"=>"oye", "email"=>"maoguerra007@gmail.com", "login"=>"oye"}, "commit"=>"Create Usuario"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[36mUsuario Create (0.0ms)[0m  [1m[32mINSERT INTO "usuarios" ("nombre", "email", "login", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nombre", "oye"], ["email", "maoguerra007@gmail.com"], ["login", "oye"], ["created_at", "2018-07-11 01:35:29.841918"], ["updated_at", "2018-07-11 01:35:29.841918"]]
+  ↳ app/controllers/usuarios_controller.rb:30
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/usuarios_controller.rb:30
+  Rendering usuario_mailer/bienvenidos_email.html.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.html.erb within layouts/mailer (0.0ms)
+  Rendering usuario_mailer/bienvenidos_email.text.erb within layouts/mailer
+  Rendered usuario_mailer/bienvenidos_email.text.erb within layouts/mailer (1.0ms)
+UsuarioMailer#bienvenidos_email: processed outbound mail in 931.3ms
+Sent mail to maoguerra007@gmail.com (1923.8ms)
+Date: Tue, 10 Jul 2018 20:35:31 -0500
+From: winmonitoreo@gmail.com
+To: maoguerra007@gmail.com
+Message-ID: <5b455ee318ec1_f983a49e2837044@CCYD19.mail>
+Subject: Bienvenido
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5b455ee316f8b_f983a49e28369bc";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5b455ee316f8b_f983a49e28369bc
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+QmllbnZlbmlkbywgb3llCgo9PT09PT09PT09PT09PT09PT09PT09PT09PT09
+PT09PT09PT09PT09PT09PT09PT09PT09CgpIYXMgaW5ncmVzYWRvIGNvcnJl
+Y3RhbWVudGUuCnR1IHVzdWFyaW8gZXMgb3llLgoKUGFyYSBpbmljaWFyIHNl
+c2nDs24gZW4gZWwgc2l0aW8sIHNpbXBsZW1lbnRlIHNpZ2EgZXN0ZSBlbmxh
+Y2U6Cmh0dHA6Ly9leGFtcGxlLmNvbS9sb2dpbgo=
+
+----==_mimepart_5b455ee316f8b_f983a49e28369bc
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Ty=
+pe' />
+  </head>
+  <body>
+    <h1>Bienvenido, oye</h1>
+    <p>
+    Has ingresado exitosamente,
+      Usuario: oye.<br>
+    </p>
+    <p>
+  Para iniciar sesi=C3=B3n en el sitio, simplemente siga este enlace : ht=
+tp://example.com/login.
+    </p>
+    <p>Ya comenzo el tour!</p>
+  </body>
+</html>
+  </body>
+</html>
+
+----==_mimepart_5b455ee316f8b_f983a49e28369bc--
+
+Redirected to http://localhost:3000/usuarios/18
+Completed 302 Found in 3187ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/usuarios/18" for 127.0.0.1 at 2018-07-10 20:35:33 -0500
+Processing by UsuariosController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mUsuario Load (1.0ms)[0m  [1m[34mSELECT  "usuarios".* FROM "usuarios" WHERE "usuarios"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/usuarios_controller.rb:70
+  Rendering usuarios/show.html.erb within layouts/application
+  Rendered usuarios/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:21
+Completed 200 OK in 258ms (Views: 216.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-08-04 10:16:19 -0500
+  
+PG::ConnectionBad (FATAL:  la autentificaci�n password fall� para el usuario �postgres�
+):
+  
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `new'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-04 10:37:41 -0500
+  
+PG::ConnectionBad (could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `new'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-04 10:38:24 -0500
+  
+PG::ConnectionBad (could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `new'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2018-08-04 10:42:32 -0500
+  
+PG::ConnectionBad (could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (::1) and accepting
+	TCP/IP connections on port 5432?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host "localhost" (127.0.0.1) and accepting
+	TCP/IP connections on port 5432?
+):
+  
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `initialize'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `new'
+pg-1.0.0-x64 (mingw32) lib/pg.rb:56:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:684:in `connect'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `new'
+activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:40:in `postgresql_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:809:in `new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:853:in `checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:832:in `try_to_checkout_new_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:793:in `acquire_connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:521:in `checkout'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:380:in `connection'
+activerecord (5.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:1008:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:118:in `retrieve_connection'
+activerecord (5.2.0) lib/active_record/connection_handling.rb:90:in `connection'
+activerecord (5.2.0) lib/active_record/migration.rb:554:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.0) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.6.2) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.6.2) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.6.2) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.0) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.0) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.5) lib/rack/method_override.rb:22:in `call'
+rack (2.0.5) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.0) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.5) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.0) lib/rails/engine.rb:524:in `call'
+puma (3.11.4) lib/puma/configuration.rb:225:in `call'
+puma (3.11.4) lib/puma/server.rb:632:in `handle_request'
+puma (3.11.4) lib/puma/server.rb:446:in `process_client'
+puma (3.11.4) lib/puma/server.rb:306:in `block in run'
+puma (3.11.4) lib/puma/thread_pool.rb:120:in `block in spawn_thread'

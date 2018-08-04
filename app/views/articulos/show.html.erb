@@ -1,0 +1,51 @@
+<h1>Mostrando artículos</h1>
+
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+<% if flash[:error] %>
+    <div class="error"><%= flash[:error] %></div>
+<% end %>
+
+
+<p>
+    <strong>Título:</strong>
+    <%= @articulo.title %><br>
+</p>
+
+<p>
+    <strong>Texto:</strong>
+    <%= @articulo.text %><br>
+</p>
+<h2>Comentarios:</h2>
+<% @articulo.comentarios.each do |comentario| %>
+    <p>
+        <strong>Comenta:</strong>
+        <%= comentario.nombre %><br>
+    </p>
+    <p>
+        <strong>Comentario:</strong>
+        <%= comentario.cuerpo %><br>
+    </p>
+
+<% end %>
+
+
+<h2>Agregar comentario:</h2>
+<%= form_with(model: [ @articulo, @articulo.comentarios.build], local: true) do |form| %>
+<p>
+    <%= form.label :nombre %><br>
+    <%= form.text_field :nombre %><br>
+</p>
+
+<p>
+    <%= form.label :cuerpo %><br>
+    <%= form.text_area :cuerpo %><br>
+</p>
+
+<p>
+    <%= form.submit %><br>
+</p>
+<% end %>
+
+<%= link_to 'Volver', articulos_path() %>
